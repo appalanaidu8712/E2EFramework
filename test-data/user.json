@@ -1,0 +1,14 @@
+{
+    "admin": {
+        "username": "tomsmith",
+        "role": "Admin"
+    },
+    "manager": {
+        "username": "tomsmith",
+        "role": "Manager"
+    },
+    "employee": {
+        "username": "tomsmith",
+        "role": "Employee"
+    }
+}

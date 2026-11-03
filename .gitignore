@@ -1,0 +1,30 @@
+node_modules/
+
+# Environment files
+.env
+.env.*
+config/*.env
+!config/*.env.example
+
+# Playwright output
+playwright-report/
+test-results/
+
+# Allure
+allure-results/
+allure-report/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
