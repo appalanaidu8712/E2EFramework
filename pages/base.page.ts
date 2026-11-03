@@ -53,5 +53,7 @@ export class BasePage {
             path: `test-results/${name}.png`,
             fullPage: true
         });
+        
     }
+    
 }
