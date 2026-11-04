@@ -7,11 +7,11 @@ import { BasePage } from './base.page';
 
 export class addelements extends BasePage {
         readonly addElementButton: Locator;
-        readonly deleteButton: Locator;
+        readonly deleteButtons: Locator;
         constructor(page: Page) {
         super(page);
         this.addElementButton = page.getByRole('button', { name: 'Add Element' });
-        this.deleteButton = page.getByRole('button', { name: 'Delete' });
+        this.deleteButtons = page.getByRole('button', { name: 'Delete' });
         }
 
     async openaddelements(): Promise<void> {
@@ -19,11 +19,14 @@ export class addelements extends BasePage {
     }
 
     async clickAddElementButton(): Promise<void> {
-        await this.addElementButton.click();
+        await this.addElementButton.dblclick();
     }
 
-    async clickDeleteButton(): Promise<void> {
-        await this.deleteButton.click();
+     async deleteElementByIndex(index: number): Promise<void> {
+        await this.deleteButtons.nth(index).click();
     }
 
+    async getDeleteButtonCount(): Promise<number> {
+        return await this.deleteButtons.count();
+    }
         }

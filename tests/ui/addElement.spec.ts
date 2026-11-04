@@ -8,7 +8,7 @@ test.describe('add element Testing', () => {
 
     test('Verify add element button functionality', async ({ addelements }) => {
         await addelements.clickAddElementButton();
-        const isDeleteButtonVisible = await addelements.isVisible(addelements.deleteButton);
+        const isDeleteButtonVisible = await addelements.isVisible(addelements.deleteButtons.nth(1));
         expect(isDeleteButtonVisible).toBeTruthy();
     })
 
