@@ -15,9 +15,8 @@ export class DashboardPage extends BasePage {
 
         super(page);
 
-        this.heading = page.getByRole('heading', {
-            name: 'Secure Area'
-        });
+        this.heading = page.getByText("You logged into a secure area!");
+
 
         this.logoutButton = page.getByRole('link', {
             name: 'Logout'
