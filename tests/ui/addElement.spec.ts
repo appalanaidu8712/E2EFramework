@@ -5,7 +5,6 @@ test.describe('add element Testing', () => {
         await addelements.openaddelements();
     })
 
-
     test('Verify add element button functionality', async ({ addelements }) => {
         await addelements.clickAddElementButton();
         const isDeleteButtonVisible = await addelements.isVisible(addelements.deleteButtons.nth(1));
