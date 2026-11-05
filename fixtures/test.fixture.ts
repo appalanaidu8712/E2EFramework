@@ -7,11 +7,13 @@ import { LoginPage } from '../pages/login.page';
 import { DashboardPage } from '../pages/dashboard.page';
 import { TablePage } from '../pages/table.page';
 import { addelements } from '../pages/addelements.page';
+import { UploadPage } from '../pages/upload.page';
 type FrameworkFixtures = {
     loginPage: LoginPage;
     dashboardPage: DashboardPage;
     tablePage: TablePage;
     addelements: addelements;
+    uploadPage: UploadPage;
 };
 export const test = base.extend<FrameworkFixtures>({
     loginPage: async ({ page }, use) => {
@@ -24,6 +26,9 @@ export const test = base.extend<FrameworkFixtures>({
         await use(dashboardPage);
     },
 
+    uploadPage: async ({ page }, use) => {
+        await use(new UploadPage(page));
+    },
 
     addelements: async ({ page }, use) => {
         await use(new addelements(page));
